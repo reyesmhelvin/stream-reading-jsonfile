@@ -1,0 +1,19 @@
+{
+  "name": "stream-reading-jsonfile",
+  "version": "1.0.0",
+  "description": "reads the contents of a json file and output it on the console.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reyesmhelvin/stream-reading-jsonfile.git"
+  },
+  "author": "Mhelvin Reyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reyesmhelvin/stream-reading-jsonfile/issues"
+  },
+  "homepage": "https://github.com/reyesmhelvin/stream-reading-jsonfile#readme"
+}

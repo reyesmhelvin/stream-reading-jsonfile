@@ -1,10 +1,7 @@
 const fs = require('fs');
-var readStream = fs.createReadStream(__dirname + '/package.json');
-var data = '';
-readStream.on('data', (chunk) => {
-	data+=chunk;
-});
-readStream.on('end', () => {
-	console.log(data);
-})
 
+var cmArg = process.argv.slice(2,3);
+var readStream = fs.createReadStream(cmArg[0]);
+var writeStream = fs.createWriteStream('output.json');
+
+readStream.pipe(writeStream);

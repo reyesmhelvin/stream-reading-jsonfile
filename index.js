@@ -1,6 +1,3 @@
-/* 
-file in current dir	 : node index.js output.json 
-*/
 const fs = require('fs');
 const through2 = require('through2');
 const path = require('path');

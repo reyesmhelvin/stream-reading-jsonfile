@@ -11,7 +11,6 @@ var file = (arg) => {
 		fs.access(arg, (err) => {
 			if (err) throw 'File does not exist!';
 		});
-		
 	}else{
 		fs.access(path.resolve(process.cwd(), arg), (err) => {
 			if (err) throw 'File does not exist!';

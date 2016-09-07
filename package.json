@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/reyesmhelvin/stream-reading-jsonfile/issues"
   },
-  "homepage": "https://github.com/reyesmhelvin/stream-reading-jsonfile#readme"
+  "homepage": "https://github.com/reyesmhelvin/stream-reading-jsonfile#readme",
+  "dependencies": {
+    "through2": "^2.0.1"
+  }
 }

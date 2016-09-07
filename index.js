@@ -3,18 +3,11 @@ const through2 = require('through2');
 const path = require('path');
 const ERR = 'File does not exist!';
 
-var cmdArg = process.argv.slice(2,3);	
-var file = (arg) => {
-	if (path.isAbsolute(arg)) {	
-		fs.access(arg, (err) => if (err) throw ERR);
-	} else {
-		fs.access(path.resolve(process.cwd(), arg), (err) => if (err) throw ERR);	
-	}
-	return arg;
-}
+var file = (path.resolve(process.argv[2]));
+fs.access(file, (err) => { if (err)  throw ERR });
 
-fs.createReadStream(file(cmdArg[0]))
-.pipe(through2((chunk, enc, callback) => {
+fs.createReadStream(file)
+.pipe(through2(function(chunk, enc, callback) {
 	this.push(chunk)
 	callback()
 })).pipe(process.stdout);
